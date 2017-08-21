@@ -1,5 +1,17 @@
 
+<!--
+    This script is a hack used to support single chrome extension usage on any domain.
+    This script has issues, though.
+    It uses "postMessage" mechanism which fails to work if someone is using it from inside an <iframe>.
+    The only solution for such cases is, use WebSockets or external servers to pass "source-ids".
 
+    Note: If you want to host it yourself:
+    1) open ScreenId.js
+    2) replace following with "getScreenId.html" link:
+
+    iframe.src = 'https://www.webrtc-experiment.com/getSourceId/'; // replace it with below line
+    iframe.src = 'https://www.yourdomain.com/getScreenId.html';
+-->
 <script>
     // https://github.com/muaz-khan/DetectRTC
     var DetectRTC = {};
@@ -32,7 +44,7 @@
             }
         },
         getChromeExtensionStatus: function (callback) {
-            // https://chrome.google.com/webstore/detail/screen-capturingajhifddimkapgcifgcodmmfdlknahffk
+            // https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk
             var extensionid = 'ajhifddimkapgcifgcodmmfdlknahffk';
 
             var image = document.createElement('img');
