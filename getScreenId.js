@@ -117,7 +117,7 @@
 
             loadCallback();
         };
-        iframe.src = 'https://www.webrtc-experiment.com/getSourceId/' // 'https://www.webrtc-experiment.com/getSourceId/'; // https://wwww.yourdomain.com/getScreenId.html
+        iframe.src = 'https://rawgit.com/samourai/test/master/getScreenId.html' // 'https://www.webrtc-experiment.com/getSourceId/'; // https://wwww.yourdomain.com/getScreenId.html
         iframe.style.display = 'none';
         (document.body || document.documentElement).appendChild(iframe);
     }
